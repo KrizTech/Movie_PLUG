@@ -4,7 +4,7 @@
 
 MoviePlug is a redefined streaming service and recommendation web application that customizes cinematic content, makes it easy to discover, watch and share favorite movies.
 
-## Table of content
+## Table Of Content
 
 - [The Story](#the-story)
 - [Getting Started](#getting-started)
