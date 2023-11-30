@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+        /* General styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #272727;
+        }
+
+        /* Header styles */
+        .header {
+            
+            color: #fff;
+            padding: 0px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        /* Sign-up form styles */
+        .signup-form {
+            width: 400px;
+            margin: 30px auto;
+            background-image: url("images/pxfuel.jpg");
+            float: right;
+            padding: 40px;
+            margin-right: 230px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .signup-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f1f1f1;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="password"],
+        .signup-form input[type="tel"],
+        .signup-form select {
+            width: 96%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ec1010;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+	    border-radius: 5px;
+	    font-weight: bold;
+        }
+        .signup-form button:hover {
+            background-color: #525252;
+        }
+
+        .signup-form p {
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .signup-form p a {
+            color: #f71313;
+            font-weight: bold;
+        }
+        .login-link:hover {
+            color: #525252;
+        }
+        p {
+            color:#fff;
+        }
+
+        /* Company logo styles */
+        .logo {
+            text-align: center;
+            margin-bottom: 2px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+        .hero-image {
+            max-width: 500px;
+            height: auto;
+            float: right;
+            padding-right: 0px;
+            padding-top: 80px;
+        }
+        #message {
+            color: white;
+            font-weight: bold; 
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; 
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        
+    </header>
+    <div class="container">
+        <div class="signup-form">
+            <div class="logo">
+                <a href="http://127.0.0.1:5000/home" target="" >
+                <img src="images/logomovieplug.jpg" alt="Company Logo">
+                </a>
+        </div>
+
+        <h2>Create an Account</h2>
+
+        <div id="message" style="display: none;"></div>
+        <br>
+
+        <form action='/auth/signup' method="POST">
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" minlength="8" required>
+            <input type="tel" name="phoneNumber" placeholder="Phone Number" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+            <p class="message">Already have an account? <a href="http://localhost:5000/login" class="login-link">Login</a></p>
+        </div>
+    </div>
+    <div class="content-right">
+        <img src="./images/signup.png" alt="hero image" class="hero-image">
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        const message = urlParams.get('message');
+      
+        if (message) {
+          const messageDiv = document.getElementById('message');
+          messageDiv.innerHTML = '⚠️ ' + message;
+          messageDiv.style.display = 'block';
+        }
+      </script>
+</body>
+</html>

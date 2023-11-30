@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/07efab1ddc.js"> crossorigin="anonymous"></script>
+  <title>MoviePlug Search</title>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a1919;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .header {
+      background-color: #020202;
+      padding-top: 0px;
+      text-align: center;
+      height: 50px;
+      margin-top: 10px;
+      width: 98.5%;
+      margin-left: 10px;
+      border-radius: 5px;
+      position: fixed;
+    }
+
+    .container2 {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-right: 60px;
+      margin-top: 0px;
+    }
+
+    .dashboard {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .dashboard2 {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .navigation a:hover {
+      background-color: #0a0d0f;
+    }
+
+<<<<<<< HEAD
+    h3 {
+      color:#fff;
+      padding: 3px 10px;
+      background-color: #fc2323;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: 'Poppins', 'sans serif';
+      margin-left: 120px;
+      margin-right: 790px;
+    }
+=======
+  h3 {
+      margin-top: 22px;
+      margin-right: 650px;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 10px;
+      background-color: #fc2323;
+      border-radius: 8px;
+      border-right: 0px;
+     }
+>>>>>>> 38736d2a1c5ebe5dfcea87b96b87e98811791c83
+
+    .sidebar {
+      background-color: #0a0b0c;
+      color: #fff;
+      width: 230px;
+      height: 83%;
+      position: fixed;
+      top: 11%;
+      left: 0;
+      padding: 15px;
+      overflow-y: auto;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    .toggle-menu {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .menu-icon {
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .sidebar-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 10px;
+      text-align: left;
+    }
+    .sidebar-menu li a:hover {
+        color: rgb(238, 30, 30);
+    }
+
+    .sidebar-menu li {
+      margin-bottom: 20px;
+    }
+
+    .sidebar-menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    ul a i {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    .search-bar {
+      margin-bottom: 5px;
+      padding-right: 20px;
+      margin-top: -26px;
+      margin-right: 500px;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 2px;
+      width: 350px;
+      border-radius: 15px;
+      font-size: 16px;
+      margin-right: -140px;
+      background-color: #1a1919;
+      font-family: 'Poppins', 'sans serif';
+      margin-top: 7px;
+      color: #fff;
+    }
+
+    .search-button {
+      padding: 3px 10px;
+      background-color: #fc2323;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 5px;
+      margin-left: 150px;
+      font-family: 'Poppins', 'sans serif';
+    }
+    .search-button:hover {
+        background-color: #1d1c1c;;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      padding-top: 20px;
+      margin-left: 180px;
+    }
+
+    .logo img {
+      max-width: 100px;
+      height: auto;
+      margin-top: -60px;
+      margin-left: -200px;
+      margin-bottom: -2px;
+    }
+    .logout-button {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: right;
+      text-decoration: wavy;
+      padding: 3px 15px;
+      background-color: #fc2323;
+      border-radius: 5px;
+      box-shadow: black;
+      float: right;
+      margin-top: -28px;
+      margin-right: 20px;
+    }
+    .logout-button:hover{
+      background-color: #1d1c1c;;
+    }
+
+    #movie-results {
+        justify-content: right;
+        margin-top: 40px;
+
+    }
+    #movie-results div {
+        height: 200px;
+        margin-top: 50px;
+        width: 150px;
+        float: right;
+        text-align: center;
+        margin: 50px;
+        margin-left: 100px;
+        margin-top: 50px;
+        padding: 10px ;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+
+    #movie-results h2 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-left: 40px;
+        color: #fff;
+    }
+
+    #movie-results p {
+        color: #fff;
+        text-align: center;
+        margin-left: 35px;
+    }
+
+    #movie-results img {
+        width: 850px;
+        height: 800px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    #movie-container ul {
+    display: flex;
+    width: 50px;
+    height: 250px;
+    padding: 5px 10px;
+
+    }
+
+
+.footer h4 {
+    text-align: center;
+    color:rgb(194, 192, 190);
+    font-size: 12px;
+    margin-top: 850px;
+    margin-bottom: -60px;
+}
+  </style>
+
+<!-- handles the input from dashboard -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchForm = document.getElementById("movie-search-form");
+    const storedQuery = sessionStorage.getItem("dashboardSearchQuery");
+
+    if (storedQuery) {
+      // Fill the search form with the stored query
+      document.getElementById("movie-query").value = storedQuery;
+
+      // Automatically submit the form
+      searchForm.submit();
+
+      // Clear the stored query
+      sessionStorage.removeItem("dashboardSearchQuery");
+    }
+  });
+</script>
+
+<script src="./js/script.js"></script>
+<script src="./js/script1.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="../js/logout.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="http://127.0.0.1:5000/dashboard.html" target="">
+        <img src="images/logomovieplug.jpg">
+      </a>
+      <div class="search-bar">
+      <form id="movie-search-form">
+          <input type="text" id="movie-query" name="movie-query" placeholder="  Search for Movies...">
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </a>
+      </div>
+
+    <div class="nav-links" id="navLinks" class="navigation" style="display: flex; justify-content: flex-end;">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <a href="#" class="logout-button">Logout</a>
+                </ul>
+            </div>
+  </header>
+  <section class="dashboard2">
+    <div class="container2">
+      <div class="sidebar">
+        <div class="toggle-menu">
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+        </div>
+        <ul class="sidebar-menu">
+          <li><a href="http://127.0.0.1:5000/dashboard.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="htp://127.0.0.1:5000/movies.html"><i class="fas fa-tape"></i>Movies & Shows</a></li>
+          <li><a href="htp://127.0.0.1:5000/Discovers.html"><i class="fas fa-cloud"></i>Discovers</a></li>
+          <li><a href="htp://127.0.0.1:5000/watchlist.html"><i class="fas fa-list"></i>Watchlist</a><br>
+          <li><a href="htp://127.0.0.1:5000/livetv.html"><i class="fas fa-tv"></i>Live Tv</a></li>
+          <li><a href="htp://127.0.0.1:5000/musicvideos.html"><i class="fas fa-video"></i>Music Videos</a><br>
+
+        </li>
+        </ul>
+      </div>
+      <h3>Results</h3>
+        <div id="movie-results">
+            <!-- Movie results will be displayed here -->
+        </div>
+
+
+  <!------- Footer ------->
+
+  <section class="footer">
+
+    <h4>&copy; 2023 MoviePlug. All rights reserved.</h4>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </footer>
+
+
+</section>
+</body>
+</html>

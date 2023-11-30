@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1d1c1c;
+    }
+    
+    .container {
+      position:relative;
+      width: 400px;
+      height: 550px;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      float: right;
+    }
+  
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("images/updown.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: -5px;
+      padding-top: 5px;
+    }
+    
+    .logo img {
+      width: 100px;
+      height: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #e9e7e7;
+      font-size: 20px;
+    }
+    p {
+      font-weight: bold;
+      font-size: 15px;
+      padding: -50px;
+      color: #c50909;
+    }
+    .p1 {
+      font-weight: 0;
+    }
+    .message {
+      color: #cfcece;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #cfcece;
+      font-weight: bold;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #f2f2f2;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .form-group button {
+      width: 106%;
+      padding: 10px;
+      background-color: #d40e0e;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .form-group button:hover {
+      background-color: #333;
+    }
+
+    .signup-link {
+      color: #e4e1e1;
+      font-weight: 600;
+    }
+    .signup-link:hover {
+      color: #615f5f;
+    }
+
+    .hero-image {
+      max-width: 500px;
+      height: auto;
+      float: left;
+    } 
+
+    #message {
+      color: white;
+      font-weight: bold; 
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; 
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="background"></div>
+    <div class="content">
+        <div class="logo">
+            <a href="http://127.0.0.1:5000/home" target="" >
+            <img src="images/logomovieplug.jpg">
+            </a>
+          </div>
+      <h2>Welcome!</h2>
+      <div id="message" style="display: none;"></div>
+      <br>
+      <form action="/auth/login" method="POST">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="text" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      <p1 class="message">Don't have an account..? <a href="http://localhost:5000/signup" class="signup-link">Sign Up</a></p1>
+    </div>
+  </div>
+  <div class="content-left">
+    <img src="./images/loginred.png" alt="hero image" class="hero-image">
+</div>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  
+  const message = urlParams.get('message');
+
+  if (message) {
+    const messageDiv = document.getElementById('message');
+    messageDiv.innerHTML = '⚠️ ' + message;
+    messageDiv.style.display = 'block';
+  }
+</script>
+</body>
+</html>

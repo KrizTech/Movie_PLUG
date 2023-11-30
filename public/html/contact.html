@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name= "viewport" content ="width=device-width, initial-scale=1.0"> 
+    <title>MoviePlug</title>
+    <link rel="stylesheet" href="./css/styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head> 
+<body>
+<section class="sub-header">
+        <nav>
+            <a href="http://127.0.0.1:5000/home.html"><img src="images/logoedited2.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/home.html">HOME</a></li>
+                    <li><a href="http://127.0.0.1:5000/About.html">ABOUT</a></li>
+                    <li><a href="http://127.0.0.1:5000/Blog.html">BLOG/SERVICES</a></li>
+                    <li><a href="http://127.0.0.1:5000/contact.html">CONTACT</a></li>
+                    <li><a href="http://127.0.0.1:5000/login.html">Login</a></li>
+                    <li><a href="http://127.0.0.1:5000/signup.html">SignUp</a></li>
+                </ul>
+            </div>
+           <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+    <h1>Contact Us</h1>
+    
+    </section>
+    
+   <!------- Contact Us Content ------->
+    
+    <section class="location">
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.255331086748!2d3.423033226794845!3d6.449999746660977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4c4c84b52bb%3A0x5faec50ebdf1a1ea!2sIkoyi!5e0!3m2!1sen!2sng!4v1685317835656!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    </section>
+    
+    <section class="contact-us">
+        
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fas fa-home"></i>
+                    <span>
+                        <h5>Seyi's Estate, 12 Afolabi Close</h5>
+                        <p>Bodija, Lagos, Nigeria</p>
+                    </span>
+                </div>
+            
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>
+                        <h5>+(234) 8067648965</h5>
+                        <p>Monday to Friday, 9AM to 5PM
+                        <br>
+                            Saturday, 9AM to 1PM
+                        </p>
+                    </span>
+                </div>
+                
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>
+                        <h5>afooseyi@mail.com</h5>
+                        <p>Email us</p>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="contact-col">
+                
+                <form action="form-handler.php" method="post">
+                       <input type="text" name="name" placeholder="Enter Your Name" required>
+                       <input type="email" name="email" placeholder="Enter Email Address" required>
+                       <input type="text" name="subject" placeholder="Subject" required>
+                       <textarea rows="8" name="message" placeholder="Your Message" required></textarea>
+                       <button type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+        
+            </div>
+            <img src="./images/comment.jpg" alt="hero image1" class="hero-image2">
+        </div>
+
+    
+    </section>
+    
+    
+    
+    
+    
+   <!------- Footer ------->
+
+   <section class="footer">
+    
+    <p> We invite you to become a part of the MoviePlug family and embark on a cinematic journey like no other. 
+    <br>Whether you're a film aficionado, a casual viewer, or just looking for a great movie night, MoviePlug has something for everyone.</br> <br> Let's celebrate the magic of storytelling, one movie at a time.</br> <br>Thank you for choosing MoviePlug as your trusted source for entertainment. Together, let's plug into the world of movies and make every viewing experience memorable. </br> 
+     <br> Happy Watching!!! </br> </p>
+    
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+    </div>
+    <p>Powered by <i class="fas fa-thumbs-up"></i> MoviePlug Team</p>
+
+    
+</section> 
+  
+
+<!-------Javascript for Toggle Menu-------> 
+<script>
+    
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0"; 
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px"; 
+    }
+    
+</script>
+    
+</body>    
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name= "viewport" content ="width=device-width, initial-scale=1.0"> 
+    <title>MoviePlug</title>
+    <link rel="stylesheet" href="./css/styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head> 
+<body>
+<section class="sub-header">
+        <nav>
+            <a href="http://127.0.0.1:5000/home.html"><img src="images/logoedited2.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/home.html">HOME</a></li>
+                    <li><a href="http://127.0.0.1:5000/About.html">ABOUT</a></li>
+                    <li><a href="http://127.0.0.1:5000/Blog.html">BLOG/SERVICES</a></li>
+                    <li><a href="http://127.0.0.1:5000/contact.html">CONTACT</a></li>
+                    <li><a href="http://127.0.0.1:5000/login.html">Login</a></li>
+                    <li><a href="http://127.0.0.1:5000/signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+           <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <h1>ABOUT US</h1>
+    <h2>When you're here, you're home.</h2>
+    <h3>(And so is all your entertainment.)</h3>
+    
+    </section>
+    
+   <!------- About Us Content ------->
+    
+    <section class="about-us">
+        
+        <div class="row">
+            
+            <div class="about-col">
+                <h1>MoviePlug: WHAT WE DO</h1>
+                <p>Welcome to MoviePlug, your ultimate destination for everything related to the world of cinema. Whether you're a die-hard film enthusiast, a casual moviegoer, or just looking for your next cinematic adventure, MoviePlug has you covered. Our passion for movies drives us to create an immersive platform where you can explore, connect, and dive deep into the magic of cinema. <br>At MoviePlug, our mission is simple: to connect people through the power of movies. We believe that films have the unique ability to transcend boundaries, spark conversations, and touch the depths of the human experience. We're dedicated to celebrating the art of storytelling through film and providing a platform that fosters a vibrant, inclusive, and passionate community of movie lovers. </br> </p>
+                <a href="http://127.0.0.1:5000/login.html" class="hero-btn red-btn">EXPLORE NOW</a>
+            </div>
+            
+                <div class="about-col">
+                <img src="images/team.jpg">
+                </div>
+        </div>
+        
+    </section>
+
+   <!------- Footer ------->
+    
+    <section class="footer">
+        <p> We invite you to become a part of the MoviePlug family and embark on a cinematic journey like no other. 
+        <br>Whether you're a film aficionado, a casual viewer, or just looking for a great movie night, MoviePlug has something for everyone.</br> <br> Let's celebrate the magic of storytelling, one movie at a time.</br> <br>Thank you for choosing MoviePlug as your trusted source for entertainment. Together, let's plug into the world of movies and make every viewing experience memorable. </br> 
+         <br> Happy Watching!!! </br> </p>
+        
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <p>Powered by <i class="fas fa-thumbs-up"></i> MoviePlug Team</p>
+    
+        
+    </section> 
+      
+<!-------Javascript for Toggle Menu-------> 
+<script>
+    
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0"; 
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px"; 
+    }
+    
+</script>
+    
+</body>    
+</html>

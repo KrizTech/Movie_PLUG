@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name= "viewport" content ="width=device-width, initial-scale=1.0">
+  <title>MoviePlug</title>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("images/cinema-dark.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+    }
+    
+    .logo {
+      font-size: 15px;
+      font-weight: bold;
+      width: 50px;
+    }
+    
+    .logo img {
+      height: 40px;
+      margin-top: -40px;
+      margin-left: -20px;
+    }
+ 
+    .logo:hover {
+    box-shadow: 0 0 5px 0px rgba(196, 8, 8, 0.8);
+    flex-basis: 10%;
+    border-radius: 10px;
+    padding: 5px 25px;
+    box-sizing: content-box;
+    transition: 0.5s;
+    margin-left: -30px;
+    }
+
+    .navigation {
+      display: flex;
+      margin-top: -40px;
+    }
+    
+    .navigation a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 5px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-section a:hover,
+    .navigation a:hover {
+      background-color: #05349b;
+    }
+    
+    .login-link {
+      background-color: #91141a;
+    }
+    .login-link:hover {
+      background: transparent;
+      transition: 3s;
+    }
+    .signup-link {
+      background-color: #ce131c;
+      font-weight: bold;
+    }
+    .signup-link:hover {
+    background: transparent;
+    transition: 3s;
+    }
+
+    .Discover-link {
+      background-color: #ce131c;
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: -20px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 2s ease;
+      float: left;
+      margin-top: -20px;
+      margin-left: -40px;
+    }
+    
+    .hero-section {
+      text-align: center;
+      margin-top: 0px;
+      width: 100%;
+      background-size: cover;
+    }
+    
+    .hero-image {
+      max-width: 800px;
+      margin-bottom: 30px;
+    }
+    
+    .hero-title {
+      font-family: 'Franklin Gothic Medium', sans-serif;
+      font-size: 80px;
+      margin-bottom: 10px;
+      text-align: left;
+      font-size: 40px;
+      color:#ffffff;
+      margin-left: -40px;
+      margin-bottom: -40px;
+    }
+    
+    .hero-description {
+      font-size: 16px;
+      color: #ffffff;
+      margin-bottom: 50px;
+      text-align: left;
+      margin-left: -40px;
+      margin-top: 10px;
+      padding-top: 50px;
+    }
+  
+    .social {
+      float: left;
+      margin-left: -270px;
+    }
+
+    .social-icon {
+    color: #1c73a5;
+    transition: color 0.2s;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 30px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 12px;
+    }
+
+.social-icon:hover {
+    color: rgb(184, 21, 21);
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="one">
+    <header>
+      <div class="logo">
+        <a href="http://127.0.0.1:5000/home" target="_blank"> 
+            <img src="images/logoedited.png" >
+        </a>
+      </div>
+      <nav class="navigation">
+        <a href="http://127.0.0.1:5000/home" class="home-link">Home</a>
+        <a href="http://127.0.0.1:5000/About" class="about-link">About</a>
+        <a href="http://127.0.0.1:5000/contact" class="contact-link">Contact</a>
+        <a href="http://127.0.0.1:5000/login" class="login-link">Login</a>
+        <a href="http://127.0.0.1:5000/signup" class="signup-link">Sign Up</a>
+      </nav>
+    </header>
+    
+    <section class="hero-section">
+      <h1 class="hero-title">MoviePlug, The Good Stuffs!<br>Your Ultimate Destination For <br> Blockbusters And Cinematic Delights..</h1>
+      <p class="hero-description">The Search Is Over! Let MoviePlug help you find the perfect movie to watch.</p>
+      <a href="http://127.0.0.1:5000/login" class="Discover-link">Discover Movies and Tv Shows</a>
+    </section>
+  </section>
+    
+    <section class="social">
+            <a class="social-icon" href="https://twitter.com/Kriz_Space" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon> 
+            </a>
+            <a class="social-icon" href="https://github.com/KrizTech" target="_blank">
+                <ion-icon name="logo-github"></ion-icon> 
+            </a>
+            <a class="social-icon" href="https://www.linkedin.com/in/kriz-tech-18093224b/" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon> 
+            </a>
+            <a class="social-icon" href="https://www.gmail.com" target="_blank">
+                <ion-icon name="mail-outline"></ion-icon> 
+            </a>
+	    <a class="social-icon" href="https://wa.me/2348065896080" target="_blank">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+    
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            
+        </div>
+        
+    </footer>
+  </div>
+</body>
+</html>

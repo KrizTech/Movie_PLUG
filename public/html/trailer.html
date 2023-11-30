@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/07efab1ddc.js"> crossorigin="anonymous"></script>
+  <title>MoviePlug Dashboard</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a1919;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .header {
+      background-color: #020202;
+      padding-top: 0px;
+      text-align: center;
+      height: 50px;
+      margin-top: 10px;
+      width: 98.5%;
+      margin-left: 10px;
+      border-radius: 5px;
+      position: fixed;
+    }
+
+    .container2 {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-right: 60px;
+      margin-top: 0px;
+    }
+
+    .dashboard {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .hero-image1 {
+        width: 40%;
+        border-radius: 5px;
+        margin-top: 15px;
+        box-shadow: 0 2px 6px rgba(252, 0, 0, 0.459);
+        margin-right: 5px; 
+    }
+    .hero-image2 {
+        width: 40%;
+        border-radius: 5px;
+        margin-top: 15px;
+        box-shadow: 0 2px 6px rgba(252, 0, 0, 0.459);
+        margin-right: -10px; 
+    }
+    .cart img {
+      width: 40%;
+      box-shadow: 0 2px 6px rgba(252, 0, 0, 0.459);
+      border-radius: 5px;
+      margin-top: 60px;
+      margin-left: 5px;
+    }
+    .cart img:hover {
+      box-shadow: 0 0 20px 0px rgba(66, 66, 66, 0.925);
+    }
+    
+    .dashboard-item img:hover {
+        box-shadow: 0 0 20px 0px rgba(66, 66, 66, 0.925);
+    }
+    .dashboard2 {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .navigation a:hover {
+      background-color: #0a0d0f;
+    }
+
+    .dashboard-item h2 {
+      margin-top: 25px;
+      margin-right: 730px;
+      color: #fff;
+      font-size: 20px;
+    }
+    .text h3 {
+        color: #fff;
+        margin-right: 760px;
+    }
+    .text p {
+        color:rgb(194, 192, 190);
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 45px;
+        text-align: left;
+    }
+    .text2 h3 {
+        color: #fff;
+        margin-right: 755px;
+        margin-top: -65px;
+    }
+    .text2 p {
+        color:rgb(194, 192, 190);
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 45px;
+        text-align: left;
+    }
+
+    p {
+        color:rgb(194, 192, 190);
+        margin-right: 730px;
+        margin-top: -10px;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .dashboard-item p {
+      margin-bottom: 0;
+    }
+
+    .dashboard-item h4 {
+      color:rgb(194, 192, 190);
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: -870px;
+    }
+    .dashboard-item a {
+        color:rgb(194, 192, 190);
+        text-align: left;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .dashboard-item2 h3 {
+      margin-top: -200px;
+      margin-right: 785px;
+      color: #fff;
+    }
+    .dashboard-item2 p{
+        color:rgb(194, 192, 190);
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-right: 810px;
+        margin-top: -15px;
+    }
+
+    .sidebar {
+      background-color: #0a0b0c;
+      color: #fff;
+      width: 230px;
+      height: 83%;
+      position: fixed;
+      top: 11%;
+      left: 0;
+      padding: 15px;
+      overflow-y: auto;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+    
+    .toggle-menu {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    
+    .menu-icon {
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .sidebar-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 10px;
+      text-align: left;
+    }
+    .sidebar-menu li a:hover {
+        color: rgb(238, 30, 30);
+    }
+    
+    .sidebar-menu li {
+      margin-bottom: 20px;
+    }
+    
+    .sidebar-menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    ul a i {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+    
+    .search-bar {
+      margin-bottom: 5px;
+      padding-right: 20px;
+      margin-top: -20px;
+      margin-right: 500px;
+    }
+    
+    .search-bar input[type="text"] {
+      padding: 2px;
+      width: 350px;
+      border-radius: 15px;
+      font-size: 16px;
+      margin-right: -140px;
+      background-color: #1a1919;
+      font-family: 'Poppins', 'sans serif';
+    }
+    
+    .search-button {
+      padding: 3px 10px;
+      background-color: #fc2323;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 150px;
+      font-family: 'Poppins', 'sans serif';
+    }
+    .search-button:hover {
+        background-color: #1d1c1c;;
+    }
+    .content {
+      margin-left: 270px;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      padding-top: 20px;
+      margin-left: -80px;
+    }
+
+    .logo img {
+      max-width: 100px;
+      height: auto;
+      margin-top: -60px;
+      margin-left: -270px;
+      margin-bottom: -2px;
+    }
+    .logout-button {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: right;
+      text-decoration: wavy;
+      padding: 3px 15px;
+      background-color: #fc2323;
+      border-radius: 5px;
+      box-shadow: black;
+      float: right;
+      margin-top: -53px;
+      margin-right: 20px;
+    }
+    .logout-button:hover{
+      background-color: #1d1c1c;
+    }
+
+    .logo i {
+      color:#fff;
+      margin-right: 200px;
+      margin-top: -20px;
+    }
+    .logo i:hover {
+      color: #ee1313;
+    }
+    .rows a {
+      margin-left: 230px;
+      margin-right: 65px;
+      margin-top: 20px;
+    }
+    .watch {
+    position: relative;
+    text-transform: uppercase;
+    background: #da0505;
+    color: #f0e7e7;
+    font-weight: 50;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    }
+    .watch:hover {
+      background: transparent;
+      transition: 2s;
+      border: 1px solid #f32718;
+    }
+    .rows1 a {
+      margin-left: 145px;
+      margin-right: 150px;
+      margin-top: 20px;
+    }
+    .watch1 {
+    position: relative;
+    text-transform: uppercase;
+    background: #da0505;
+    color: #f0e7e7;
+    font-weight: 50;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    }
+    .watch1:hover {
+      background: transparent;
+      transition: 2s;
+      border: 1px solid #f32718;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <i class="fas fa-bars"></i>
+      <a href="http://127.0.0.1:5000/dashboard.html" target="">
+        <img src="images/logomovieplug.jpg">
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="  Search for Movies...">
+        <a href="C:/Users/KRIZ/Desktop/MovieApp/search1.html" target="">
+          <button class="search-button">Search</button>
+        </a>
+      </div>
+    </div>
+    
+    <div class="nav-links" id="navLinks" class="navigation" style="display: flex; justify-content: flex-end;">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <a href="http://127.0.0.1:5000/login.html" class="logout-button">Logout</a>
+                </ul>
+            </div>
+  </header>
+  <section class="dashboard2">
+    <div class="container2">
+      <div class="sidebar">
+        <div class="toggle-menu">
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+        </div>
+        <ul class="sidebar-menu">
+          <li><a href="http://127.0.0.1:5000/home.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="http://127.0.0.1:5000/movies.html"><i class="fas fa-tape"></i>Movies & Shows</a></li>
+          <li><a href="http://127.0.0.1:5000/trailer.html"><i class="fas fa-play"></i>Trailer</a></li>
+          <li><a href="http://127.0.0.1:5000/discovers.html"><i class="fas fa-cloud"></i>Discovers</a></li>
+          <li><a href="http://127.0.0.1:5000/watchlist.html"><i class="fas fa-list"></i>Watchlist</a><br>
+            <li><a href="http://127.0.0.1:5000/livetv.html"><i class="fas fa-tv"></i>Live Tv</a></li>
+          <li><a href="http://127.0.0.1:5000/musicvideos.html"><i class="fas fa-video"></i>Music Videos</a><br>
+
+        </li>
+        </ul>
+      </div>
+
+  <div class="container">
+    <div class="dashboard">
+      <div class="dashboard-item">
+        
+        <h2>Trailer</h2>
+           <p>Previews</p>
+           <img src="images/meg3.jpg" alt="hero image" class="hero-image1">
+           <img src="images/blackadam.jpg" alt="hero image" class="hero-image2">
+            
+      </div>
+      <div class="rows">
+      <a href="http://127.0.0.1:5000/megwatch.html" class="watch" >Watch Trailer</a>
+      <a href="http://127.0.0.1:5000/adamwatch.html" class="watch" >Watch Trailer</a>
+    </div>
+          <div class="cart">
+           <img src="images/trolls1.jpg" alt="hero image" class="hero-image3">
+           <img src="images/corn.jpg" alt="hero image" class="hero-image3">
+          </div>
+      </div>
+      <div class="rows1">
+      <a href="http://127.0.0.1:5000/megwatch.html#" class="watch1" >Watch Trailer</a>
+      <a href="http://127.0.0.1:5000/adamwatch.html" class="watch1" >Watch Trailer</a>
+    </div>
+    
+</section>
+
+<script>
+
+ScrollReveal({
+        reset:true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+    });
+
+    ScrollReveal().reveal('h2, h3, h4, p', {delay: 500, origin: 'left', interval: 700});
+    ScrollReveal().reveal('.logo img, i', {delay: 600, origin: 'left' });
+    ScrollReveal().reveal('.search-bar', {delay: 900, origin: 'top', interval: 700});
+    ScrollReveal().reveal('.nav-links ul', {delay: 600, origin: 'right' });
+    ScrollReveal().reveal('.sidebar', {delay: 600, origin: 'bottom' });
+    ScrollReveal().reveal('.sidebar-menu li', {delay: 600, origin: 'left', interval: 500});
+    ScrollReveal().reveal('.dashboard-item img', {delay: 600, origin: 'bottom', interval: 1000 });
+    ScrollReveal().reveal('.container3 img', {delay: 600, origin: 'bottom', interval: 1000 });
+    ScrollReveal().reveal('.container4 img', {delay: 600, origin: 'bottom', interval: 1000 });
+    ScrollReveal().reveal('.social-icon', {delay: 600, origin: 'bottom', interval: 1000 });
+    ScrollReveal().reveal('.rows a', {delay: 600, origin: 'bottom', interval: 1000 });
+    ScrollReveal().reveal('.cart img', {delay: 600, origin: 'bottom', interval: 1000 });
+    ScrollReveal().reveal('.rows1 a', {delay: 600, origin: 'bottom', interval: 1000 });
+
+    function toggle(){
+      var trailer= document.querySelector(".trailer")
+      trailer.classList.toggle("active")
+    }
+</script>
+</body>
+</html>

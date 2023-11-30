@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/07efab1ddc.js"> crossorigin="anonymous"></script>
+  <title>MoviePlug Dashboard</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--primary-color);
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .header {
+      background-color: #020202;
+      padding-top: 0px;
+      text-align: center;
+      height: 50px;
+      margin-top: 10px;
+      width: 98.5%;
+      margin-left: 10px;
+      border-radius: 5px;
+      position: fixed;
+    }
+    h2{
+  font-size: 14px;
+  color: #fff;
+  margin-top: -30px;
+  margin-right: 10px;
+}
+
+    .container2 {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-right: 60px;
+      margin-top: 0px;
+    }
+
+    .dashboard {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .hero-image1 {
+        width: 30%;
+        border-radius: 5px;
+        margin-top: 15px;
+        box-shadow: 0 2px 6px rgba(252, 0, 0, 0.459);
+        margin-right: 25px; 
+    }
+    .hero-image2 {
+        width: 30%;
+        border-radius: 5px;
+        margin-top: 15px;
+        box-shadow: 0 2px 6px rgba(252, 0, 0, 0.459);
+        margin-right: 110px; 
+    }
+    .hero-image3 {
+        width: 30%;
+        border-radius: 5px;
+        margin-top: 15px;
+        box-shadow: 0 2px 6px rgba(252, 0, 0, 0.459);
+        margin-left: -120px;
+        float: right;
+    }
+    
+    .dashboard-item img:hover {
+        box-shadow: 0 0 20px 0px rgba(66, 66, 66, 0.925);
+    }
+    .dashboard2 {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .navigation a:hover {
+      background-color: #0a0d0f;
+    }
+
+    .dashboard-item h2 {
+      margin-top: 25px;
+      margin-right: 750px;
+      color: var(--secondary-color);
+      font-size: 20px;
+    }
+    .text h3 {
+        color: var(--secondary-color);
+        margin-right: 760px;
+    }
+    .text p {
+        color: var(--secondary-color);
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 45px;
+        text-align: left;
+    }
+    .text2 h3 {
+        color: var(--secondary-color);
+        margin-right: 755px;
+        margin-top: -65px;
+    }
+    .text2 p {
+        color: var(--secondary-color);
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 45px;
+        text-align: left;
+    }
+
+    p {
+        color: var(--secondary-color);
+        margin-right: 850px;
+        margin-top: -10px;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .dashboard-item p {
+      margin-bottom: 0;
+      
+    }
+    .dashboard-item h4 {
+      color: var(--secondary-color);
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: -870px;
+    }
+    
+    .container3 {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+    }
+    .container3 div {
+        height: 230px;
+        width: 190px;
+        float: left;
+        text-align: center;
+        margin: 44px;
+        margin-right: -35px;
+        margin-top: 60px;
+    
+    }
+    .container3 img {
+        background-size: cover;
+        width: 160px;
+        height: 230px;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(252, 0, 0, 0.459);
+        margin-right: 30px;
+        margin-top: -60px;
+    }
+    .container3 img:hover {
+        box-shadow: 0 0 20px 0px rgba(187, 4, 4, 0.925);
+    }
+    .container4 {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        
+    }
+    .container4 div {
+        height: 230px;
+        width: 190px;
+        float: left;
+        text-align: center;
+        margin: 44px;
+        margin-right: -35px;
+        margin-top: 60px;
+    
+    }
+    .container4 img {
+        background-size: cover;
+        width: 160px;
+        height: 230px;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(252, 0, 0, 0.459);
+        margin-right: 30px;
+        margin-top: -60px;
+    }
+    .container4 img:hover {
+        box-shadow: 0 0 20px 0px rgba(187, 4, 4, 0.925);
+    }
+    .dashboard-item2 h3 {
+      margin-top: -200px;
+      margin-right: 785px;
+      color: var(--secondary-color);
+    }
+    .dashboard-item2 p{
+        color: var(--secondary-color);
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-right: 810px;
+        margin-top: -15px;
+    }
+
+    .sidebar {
+      background-color: #0a0b0c;
+      color: #fff;
+      width: 230px;
+      height: 83%;
+      position: fixed;
+      top: 11%;
+      left: 0;
+      padding: 15px;
+      overflow-y: auto;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+    
+    .toggle-menu {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    
+    .menu-icon {
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .sidebar-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 10px;
+      text-align: left;
+    }
+    .sidebar-menu li a:hover {
+        color: rgb(238, 30, 30);
+    }
+    
+    .sidebar-menu li {
+      margin-bottom: 20px;
+    }
+    
+    .sidebar-menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    ul a i {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+    
+    .search-bar {
+      margin-bottom: 5px;
+      padding-right: 20px;
+      margin-top: -20px;
+      margin-right: 500px;
+    }
+    
+    .search-bar input[type="text"] {
+      padding: 2px;
+      width: 350px;
+      border-radius: 15px;
+      font-size: 16px;
+      margin-right: -140px;
+      background-color: #1a1919;
+      font-family: 'Poppins', 'sans serif';
+      color: #fff;
+    }
+    
+    .search-button {
+      padding: 3px 10px;
+      background-color: #fc2323;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 150px;
+      font-family: 'Poppins', 'sans serif';
+    }
+    .search-button:hover {
+        background-color: #1d1c1c;;
+    }
+    .content {
+      margin-left: 270px;
+    }
+
+    :root {
+      --primary-color: #1a1919;
+      --secondary-color: #fff;
+    }
+
+    .dark-theme {
+      --primary-color: #fdfdfd;
+      --secondary-color: #1a1919;
+    }
+    #icon {
+      width: 25px;
+      cursor: pointer;
+      margin-bottom: 45px;
+      margin-top: -35px;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      padding-top: 20px;
+      margin-left: -80px;
+    }
+
+    .logo img {
+      max-width: 100px;
+      height: auto;
+      margin-top: -60px;
+      margin-left: -270px;
+      margin-bottom: -2px;
+    }
+    .logout-button {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: right;
+      text-decoration: wavy;
+      padding: 3px 15px;
+      background-color: #fc2323;
+      border-radius: 5px;
+      box-shadow: black;
+      float: right;
+      margin-top: -53px;
+      margin-right: 20px;
+    }
+    .logout-button:hover{
+      background-color: #1d1c1c;
+    }
+
+    .social-icon {
+    color: #f31919;
+    transition: color 0.2s;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 30px;
+
+}
+
+.social-icon:hover {
+    color: rgb(148, 147, 147);
+}
+.footer h4 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 12px;
+    margin-bottom: -65px;
+    margin-top: 0px;
+}
+.logo i {
+  color:#fff;
+  margin-right: 200px;
+  margin-top: -20px;
+}
+.logo i:hover {
+  color: #ee1313;
+}
+
+.names p {
+  display: inline;
+  justify-content: space-between;
+  margin-left: 85px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 75px;
+  padding: 1px 10px;
+  background-color: #fc2323;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.names p:hover {
+  background-color: #0f0f0f;
+  transition: 1s;
+}
+
+
+  </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dashboardForm = document.getElementById("movie-search-form");
+
+  dashboardForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const queryInput = document.getElementById("movie-query");
+    const movieName = queryInput.value.trim();
+
+    if (movieName.length === 0) {
+      alert("Can't take an empty string");
+      console.log('Query can\'t be empty');
+      return;
+    }
+
+    // Redirect to search1.html with the query parameter
+    window.location.href = `http://127.0.0.1:5000/search.html?dashboardQuery=${encodeURIComponent(movieName)}`;
+  });
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="../js/logout.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <i class="fas fa-bars"></i>
+      <a href="http://127.0.0.1:5000/dashboard.html" target="">
+        <img src="../images/logomovieplug.jpg">
+      </a>
+      <div class="search-bar">
+	<form id="movie-search-form">
+           <input type="text" id="movie-query" name="movie-query" placeholder="  Search for Movies...">
+           <button type="submit" class="search-button">Search</button>
+	</form>
+      </div>
+    </div>
+    
+    <div class="nav-links" id="navLinks" class="navigation" style="display: flex; justify-content: flex-end;">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+		<h2>MODE</h2>
+                <img src="images/moon.png" id="icon">
+                <ul>
+                    <a href="#" class="logout-button">Logout</a>
+                </ul>
+            </div>
+  </header>
+  <section class="dashboard2">
+    <div class="container2">
+      <div class="sidebar">
+        <div class="toggle-menu">
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+        </div>
+        <ul class="sidebar-menu">
+          <li><a href="http://127.0.0.1:5000/dashboard.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="http://127.0.0.1:5000/movies.html"><i class="fas fa-tape"></i>Movies & Shows</a></li>
+          <li><a href="http://127.0.0.1:5000/trailer.html"><i class="fas fa-play"></i>Trailer</a></li>
+          <li><a href="http://127.0.0.1:5000/discovers.html"><i class="fas fa-cloud"></i>Discovers</a></li>
+          <li><a href="http://127.0.0.1:5000/watchlist.html"><i class="fas fa-list"></i>Watchlist</a><br>
+            <li><a href="http://127.0.0.1:5000/stream.html"><i class="fas fa-tv"></i>Stream Now</a></li>
+          <li><a href="http://127.0.0.1:5000/musicvideos.html"><i class="fas fa-video"></i>Music Videos</a><br>
+
+        </li>
+        </ul>
+      </div>
+
+  <div class="container">
+    <div class="dashboard">
+      <div class="dashboard-item">
+        <h4>Home</h4>
+        <h2>Trending Movies</h2>
+           <p>Live Now</p>
+           <a href="#"><img src="../images/galaxy.jpg" alt="hero image" class="hero-image1"></a>
+           <a href="#"><img src="../images/island.jpg" alt="hero image" class="hero-image2"></a>
+           <a href="#"><img src="../images/trans.jpg" alt="hero image" class="hero-image3"></a>
+           
+      </div>
+      
+    </div>
+
+    <div class="names">
+      <p>Jurassic World 3</p>
+      <p>The Mysterious Island 2</p>
+      <p>Transylvania</p>
+    </div>
+
+    <div class="text">
+        <h3>Popular Movies</h3>
+           <p>Most Stream</p>
+    </div>
+      <div class="container3">
+           <div>
+            <img src="../images/freeguy.jpg" alt="hero image">
+        </div>
+           <div>
+            <img src="../images/guidian.jpg" alt="hero image">
+        </div>
+           <div>
+            <img src="../images/johnwickk.jpg" alt="hero image">
+        </div>
+           <div>
+            <img src="../images/extraction.jpg" alt="hero image">
+        </div>
+           <div>
+            <img src="../images/after1.jpg" alt="hero image">
+        </div>
+      </div>
+      <div class="text2">
+        <h3>Recently Added</h3>
+           <p>Movies</p>
+      <div class="container4">
+        <div>
+         <img src="../images/antman.jpg" alt="hero image">
+     </div>
+        <div>
+         <img src="../images/violent.jpg" alt="hero image">
+     </div>
+        <div>
+         <img src="../images/spiderman2.jpeg" alt="hero image">
+     </div>
+        <div>
+         <img src="../images/creed.jpg" alt="hero image">
+     </div>
+        <div>
+         <img src="../images/acrimony.jfif" alt="hero image">
+     </div>
+   </div>
+
+  <!------- Footer ------->
+    
+  <section class="footer">
+    <a class="social-icon" href="https://twitter.com/Kriz_Space" target="_blank">
+        <ion-icon name="logo-twitter"></ion-icon> 
+    </a>
+    <a class="social-icon" href="https://github.com/KrizTech" target="_blank">
+        <ion-icon name="logo-github"></ion-icon> 
+    </a>
+    <a class="social-icon" href="https://www.linkedin.com/in/kriz-tech-18093224b/" target="_blank">
+        <ion-icon name="logo-linkedin"></ion-icon> 
+    </a>
+    <a class="social-icon" href="https://www.gmail.com" target="_blank">
+        <ion-icon name="mail-outline"></ion-icon> 
+    </a>
+    <a class="social-icon" href="https://wa.me/2348065896080" target="_blank">
+        <ion-icon name="logo-whatsapp"></ion-icon> 
+    </a>
+    <h4>&copy; 2023 MoviePlug. All rights reserved.</h4>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+        </div>
+    </section>
+
+    
+</section>
+
+<script>
+
+ScrollReveal({
+        reset:true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400
+    });
+
+    ScrollReveal().reveal('h2, h3, h4, p', {delay: 500, origin: 'left', interval: 200});
+    ScrollReveal().reveal('.logo img,', {delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.search-bar', {delay: 500, origin: 'top', interval: 200});
+    ScrollReveal().reveal('.nav-links ul, img', {delay: 500, origin: 'right' });
+    ScrollReveal().reveal('.sidebar', {delay: 500, origin: 'bottom' });
+    ScrollReveal().reveal('.dashboard-item img', {delay: 500, origin: 'bottom', interval: 200 });
+    ScrollReveal().reveal('.container3 img', {delay: 500, origin: 'bottom', interval: 200 });
+    ScrollReveal().reveal('.container4 img', {delay: 500, origin: 'bottom', interval: 100 });
+    ScrollReveal().reveal('.social-icon', {delay: 500, origin: 'bottom', interval: 200 });
+
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src = "images/sun.png";
+      }else {
+        icon.src ="images/moon.png";
+      }
+    }
+
+</script>
+</body>
+</html>
